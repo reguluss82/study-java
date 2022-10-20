@@ -21,7 +21,16 @@ public class Teacher {
 		return age;
 	}
 
-	public void setAge(int age) {
+//	public void setAge(int age) {
+//		this.age = age;
+//	}
+	
+	public void modifyAge(int age) {
+		if (age < 0) {
+			System.out.println("당신은 - 나이가 가능하냐");
+		} else {
+			this.age = age;
+		}
 		this.age = age;
 	}
 

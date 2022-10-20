@@ -6,7 +6,7 @@ public class Car3 {
 	int outTime; // 출고시간
 	int fee; // 주차요금
 	final int AMTPERTIME = 3000; // final 은 상수, 대문자로 입력해라
-
+	Car3(){} //생성자 overLoading
 	Car3(String n, int in, int out) {
 
 		name = n;

@@ -11,7 +11,8 @@ public class PersonEx {
 		
 		Teacher th1 = new Teacher();
 		th1.setName("길동");
-		th1.setAge(35);
+		//th1.setAge(35);
+		th1.modifyAge(-3);
 		th1.setSubject("Java");
 		
 		Manager mg1 = new Manager();

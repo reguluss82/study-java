@@ -1,5 +1,9 @@
 package ch07;
 
+// 				OverLoading								OverRiding
+//	정의		같은 Class여러개 동일이름 method		다른 Class 상속
+//	유형		생성자/Method OverLoading				extends / implement
+//	특징		호출에 따라 Type/변수Count 자동대응		method->내꺼 , 변수->부모꺼
 public class Car2 {
 	int a = 7;
 	void move() {
@@ -10,6 +14,7 @@ public class Car2 {
   // 부모클래스 Ca2 로부터 move 메소드 상속 <- overRiding  (r이 2개니까 대문자 써주자)
 class Bus extends Car2 {
 	int	a = 25;
+	// overRiding
 	void move() {
 		System.out.println("40명 태우고 이동");
 	}

@@ -2,9 +2,9 @@ package ch07;
 
 // 객체가 객체를 참조 Association 관계
 public class CarEx {
-	String kind; // 알파엔진 / 베타엔진
+	String  kind; // 알파엔진 / 베타엔진
 	// 객체를 member변수 OK 많이 쓰일것이다.
-	Engine eg;
+	Engine  eg;
 	int		kkk = 0; // 디버그 용도
 	CarEx(String kind, Engine eg) {
 		this.kind = kind;

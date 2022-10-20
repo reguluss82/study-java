@@ -28,7 +28,8 @@ public class Super1 {
 	public static void main(String[] args) {
 		Child child = new Child();
 		child.print();
-		child.display();
+		System.out.println("child.a -> " + child.a);
+		child.display(); //자식에 없는 display -> 부모의 display
 
 	}
 
