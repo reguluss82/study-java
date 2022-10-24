@@ -13,7 +13,7 @@ class Parent3 {
 		System.out.println("매개변수 1개 Parent3: x = " + x);;
 	}
 }
-
+// OverLoading
 class Child3 extends Parent3 {
 	Child3(int x) {
 		// Parent3 기본 생성자 호출
@@ -43,7 +43,8 @@ public class Super3 {
 
 	public static void main(String[] args) {
 		Child5 child5 = new Child5(7, 15);
-
+		//Child5 child5 = new Child5(); 
+		//-> 오류 - 기본생성자가 없음. (생성자가 따로있기때문에 기본생성 자동으로 만들어지지않는다)
 	}
 
 }

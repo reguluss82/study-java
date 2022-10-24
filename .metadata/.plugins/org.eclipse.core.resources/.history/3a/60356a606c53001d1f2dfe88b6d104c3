@@ -1,0 +1,50 @@
+package ch07;
+// 생성자 흐름 (기사시험에서 나올만한) (실무에서는 이렇게 생성자 복잡하게 엮지는 않는다)
+class Parent3 {
+	Parent3() {
+		System.out.println("1. 매개변수 없는 조상 생성자 Parent3");
+	}
+	Parent3(int x) {
+		this(); 
+		// 자신 Class의 생성자 (예제의 경우 파라미터 없으므로 기본생성자 호출)
+		// 생성자 내부의 코드 블록 첫줄에 this()를 호출함으로 자신의 다른 생성자를 호출 할 수 있다. 
+		// 자동으로 해당 파라미터에 적합한 자신의 생성자를 호출한다.
+		// 주의할 점은 생성자 코드블록 내부의 this() 위에 다른 소스코드가 존재해서는 안된다.
+		System.out.println("매개변수 1개 Parent3: x = " + x);;
+	}
+}
+// OverLoading
+class Child3 extends Parent3 {
+	Child3(int x) {
+		// Parent3 기본 생성자 호출
+		System.out.println("2. Child3 매개변수 1개 Child3: x = " + x);
+	}
+	Child3(int x , int y) {
+		this(x);	// 자신 Class의 1개 매개변수 생성자
+		System.out.println("3. Child3 매개변수 2개 부모: x = " + x + ", y " + y);
+	}
+}
+
+class Child5 extends Child3 {
+
+	Child5(int x, int y) {
+		super(x, y); // Child3 Class 2개 매개변수 생성자
+		System.out.println("4. Child5 매개변수 2개 자식: x = " + x + " , y " +y);
+	}
+	void cc5() {
+		System.out.println("Child cc5 메소드...");
+	}
+	
+}
+
+
+
+public class Super3 {
+
+	public static void main(String[] args) {
+		Child5 child5 = new Child5(7, 15);
+		//Child5 child5 = new Child5(); 
+		//-> 오류 - 기본생성자가 없음. (생성자가 따로있기때문에 기본생성자 자동으로 만들어지지않는다)
+	}
+
+}
